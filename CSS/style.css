@@ -1,0 +1,121 @@
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* Dark Purple */
+    color: #6A1B9A;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #8BC34A; /* Green */
+    animation: logoAnimation 2s ease-in-out;
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+}
+
+header nav a {
+    color: #6A1B9A;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #8BC34A; /* Green on hover */
+}
+
+/* Carousel Section */
+.carousel-container {
+    margin-top: 80px; /* Adjust for header space */
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer Section */
+footer {
+    background-color: #6A1B9A; /* Dark Purple */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+footer .footer-logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #8BC34A; /* Green */
+}
+
+footer .footer-links {
+    margin-top: 20px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #8BC34A; /* Green on hover */
+}
+
+/* Animation for Logo */
+@keyframes logoAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Make the carousel images responsive */
+@media (max-width: 768px) {
+    header .logo {
+        font-size: 24px;
+    }
+    header nav a {
+        font-size: 16px;
+    }
+}
